@@ -9,12 +9,14 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Method;
 
 /**
- * 어노테이션 적용범위 설정
+ * CustomAnnotationAspect 클래스의 주요 역할
+ * @JinanLogging 어노테이션이 적용된 메서드의 동작을 가로채서 전후에 원하는 로직을 실행한다.
  */
 @Aspect
 @Component
 public class CustomAnnotationAspect {
 
+    // @Around를 통해 @JinanLogging 어노테이션이 적용된 메서드가 실행될 때 logAround 메서드 내부의 코드가 작동하도록 지정
     @Around("@annotation(com.study.customannotation.annotation.JinanLogging)")
     public Object logAround(ProceedingJoinPoint joinPoint) throws Throwable {
 
