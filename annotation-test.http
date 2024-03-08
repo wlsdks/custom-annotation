@@ -1,0 +1,8 @@
+### 커스텀 어노테이션 적용 (default 메시지)
+GET http://localhost:8080/customAnnotation
+
+### 커스텀 어노테이션 적용 (내가 설정한 메시지)
+GET http://localhost:8080/customAnnotationMethodSetMessage
+
+### 커스텀 어노테이션 미적용
+GET http://localhost:8080/nonAnnotation
